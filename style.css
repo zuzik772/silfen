@@ -13,7 +13,7 @@ ul {
 header img {
   max-width: 300px;
   display: block;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 
 @media screen and (max-width: 550px) {
@@ -24,7 +24,7 @@ header img {
 
 header div ul {
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   right: 2rem;
   display: flex;
   gap: 1rem;
@@ -35,4 +35,6 @@ nav ul {
   gap: 2rem;
   justify-content: center;
   font-family: var(--primaryFont);
+  background-color: #b9d8e8;
+  padding: 1.5rem 0;
 }
