@@ -14,6 +14,10 @@ ul {
   padding-inline-start: 0;
 }
 
+p {
+  margin: 0;
+}
+
 header img {
   max-width: 300px;
   display: block;
@@ -48,6 +52,56 @@ nav ul {
 
 .selected {
   border-bottom: 2px solid var(--primaryColor);
+}
+
+article {
+  display: grid;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+section h2 {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+.intro {
+  background-color: var(--secondaryColor);
+}
+
+.intro img {
+  width: 700px;
+  max-width: 100%;
+}
+.products {
+  margin: 2rem 0;
+}
+.products div {
+  display: grid;
+  max-width: 400px;
+}
+.products button {
+  background-color: var(--primaryColor);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+}
+
+.products div + p {
+  text-align: right;
+  margin-right: 2rem;
+  font-size: 1.5rem;
 }
 
 footer {
