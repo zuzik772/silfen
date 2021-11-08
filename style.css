@@ -1,5 +1,7 @@
 :root {
   --primaryFont: "Manrope", sans-serif;
+  --primaryColor: #77b3d2;
+  --secondaryColor: #b9d8e8;
 }
 
 * {
@@ -13,13 +15,18 @@ ul {
 header img {
   max-width: 300px;
   display: block;
-  margin: 1.5rem auto;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 550px) {
   header img {
     max-width: 200px;
   }
+}
+
+header div {
+  background-color: var(--primaryColor);
+  padding: 1.5rem;
 }
 
 header div ul {
@@ -35,6 +42,9 @@ nav ul {
   gap: 2rem;
   justify-content: center;
   font-family: var(--primaryFont);
-  background-color: #b9d8e8;
-  padding: 1.5rem 0;
+  margin: 2rem 0;
+}
+
+.selected {
+  border-bottom: 2px solid var(--primaryColor);
 }
