@@ -10,6 +10,11 @@
   list-style: none;
   font-family: var(--primaryFont);
 }
+
+h2 {
+  text-transform: uppercase;
+}
+
 ul {
   padding-inline-start: 0;
 }
@@ -58,16 +63,16 @@ article {
   display: grid;
 }
 
-.intro {
+.intro,
+.sust {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
 }
 
-section h2 {
+.intro h2 {
   font-size: 3rem;
   margin: 0;
-  text-transform: uppercase;
 }
 
 @media screen and (max-width: 700px) {
@@ -76,6 +81,9 @@ section h2 {
   }
 }
 
+section img {
+  max-width: 200px;
+}
 .intro {
   background-color: var(--secondaryColor);
 }
@@ -85,11 +93,15 @@ section h2 {
   max-width: 100%;
 }
 .products {
-  margin: 2rem 0;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
 }
 .products div {
   display: grid;
-  max-width: 400px;
+  max-width: 200px;
+  gap: 1rem;
 }
 .products button {
   background-color: var(--primaryColor);
@@ -100,10 +112,32 @@ section h2 {
 
 .products div + p {
   text-align: right;
+  margin-top: 2rem;
   margin-right: 2rem;
-  font-size: 1.5rem;
+  grid-column: 1/-1;
+}
+.sust {
+  margin-bottom: 2rem;
+}
+.sust div {
+  max-width: 70%;
 }
 
+.sust div p:first-of-type {
+  font-style: italic;
+}
+
+.sust div p:last-child {
+  margin-top: 1rem;
+  font-weight: 300;
+}
+.some {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.some div {
+  margin: 2rem;
+}
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -128,17 +162,19 @@ footer aside {
   margin-top: -5rem;
 }
 
-footer aside i {
+i {
   background-color: #d8edf0;
   color: #22343d;
   border-radius: 25px;
   font-size: 30px;
 }
-footer aside i:nth-child(2) {
+footer i:nth-child(2),
+.some i:first-of-type {
   padding: 10px 12px;
   margin-right: 10px;
 }
-footer aside i:last-child {
+footer i:last-child,
+.some i:last-of-type {
   padding: 10px 15px;
 }
 
