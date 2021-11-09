@@ -7,7 +7,6 @@
 
 * {
   box-sizing: border-box;
-  list-style: none;
   font-family: var(--primaryFont);
 }
 
@@ -15,10 +14,25 @@ h2 {
   text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: var(--secondaryColor);
+}
+
+nav a {
+  padding: 4px;
+}
+
 ul {
   padding-inline-start: 0;
 }
-
+li {
+  list-style: none;
+}
 p {
   margin: 0;
 }
@@ -52,7 +66,7 @@ nav ul {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .selected {
@@ -96,7 +110,7 @@ section img {
   margin: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  place-items: center;
+  /* place-items: center; */
 }
 .products div {
   display: grid;
@@ -115,6 +129,11 @@ section img {
   margin-top: 2rem;
   margin-right: 2rem;
   grid-column: 1/-1;
+  place-self: end;
+}
+
+.products p a {
+  font-weight: 800;
 }
 .sust {
   margin-bottom: 2rem;
