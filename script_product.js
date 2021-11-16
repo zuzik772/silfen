@@ -42,7 +42,7 @@ function showOneItem(item) {
   const clone = template.cloneNode(true);
   clone.querySelector(".nameBag").textContent = item.bag_name;
   console.log(item.bag_name);
-  clone.querySelector(".price").textContent = item.price;
+  clone.querySelector(".price").textContent = `${item.price} DKK`;
   clone.querySelector(".description").textContent = item.description;
   clone.querySelector(".material").textContent = item.material;
   clone.querySelector(".dimensions").textContent = item.dimensions;

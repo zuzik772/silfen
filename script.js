@@ -19,10 +19,8 @@ function showOneItem(item) {
   const myTemplate = document.querySelector("template").content;
   const myClone = myTemplate.cloneNode(true);
   myClone.querySelector(".title").textContent = item.bag_name;
-  myClone.querySelector(".price").textContent = item.price;
-  myClone
-    .querySelector("a")
-    .setAttribute("href", "product.html?id=" + item.id);
+  myClone.querySelector(".price").textContent = `${item.price} DKK`;
+  myClone.querySelector("a").setAttribute("href", "product.html?id=" + item.id);
   myClone.querySelector("img").src =
     item._embedded[
       "wp:featuredmedia"
