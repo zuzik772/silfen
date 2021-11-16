@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
 const url = "https://zuzanacreates.com/wp21d/wp-json/wp/v2/bag?_embed";
 
 getData();
@@ -6,26 +9,31 @@ function getData() {
     .then(function (response) {
       return response.json();
     })
-    .then(showItems);
-}
-
-function showItems(items) {
-  console.log(items);
-  items.forEach(showOneItem);
+    .then((data) => data.forEach(showOneItem));
 }
 
 function showOneItem(item) {
   console.log(item);
-  const myTemplate = document.querySelector("template").content;
-  const myClone = myTemplate.cloneNode(true);
-  myClone.querySelector(".title").textContent = item.bag_name;
-  myClone.querySelector(".price").textContent = item.price;
-  myClone.querySelector("img").src = item.post;
+  console.log("it works");
+  console.log(item._links["wp:attachment"][0].href);
 
-  //   if (item.instock == 1) {
-  //     myClone.querySelector("img").classList.add("soldout");
-  //     myClone.querySelector("aside").textContent = item.title.rendered;
-  //     console.log(item.instock);
-  //   }
-  document.querySelector(".products").appendChild(myClone);
+  //   myClone.querySelector(".title").textContent = item.bag_name;
+  //   myClone.querySelector(".price").textContent = item.price;
+  const urlGallery =
+    "https://zuzanacreates.com/wp21d/wp-json/wp/v2/media?parent=" + id;
+  fetch(urlGallery)
+    .then(function (response) {
+      return response.json();
+    })
+    .then((data) => data.forEach(showProduct));
+
+  function showProduct(imageData) {
+    console.log("hi");
+    console.log(imageData);
+    const myTemplate = document.querySelector("template").content;
+    const myClone = myTemplate.cloneNode(true);
+    myClone.querySelector("img").src = imageData.source_url;
+
+    document.querySelector(".products").appendChild(myClone);
+  }
 }

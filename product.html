@@ -20,7 +20,7 @@
     <title>SILFEN</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
   </head>
-  <body class="home">
+  <body>
     <header>
       <div>
         <img src="img/logo-s.png" alt="Silfen logo" />
@@ -57,7 +57,7 @@
       </div>
       <nav>
         <ul>
-          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#">About</a></li>
           <li><a href="shop.html">DROP PROM</a></li>
@@ -65,61 +65,38 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <article>
-        <section class="intro">
-          <div>
-            <h1>New drop</h1>
-            <p>Get ready for prom</p>
-          </div>
-          <img src="img/intro_bag.jpg" alt="Silfen bag" />
-        </section>
-        <h2>New in</h2>
-        <section class="products">
-          <template>
-            <a href="product.html">
-              <img src="" alt="" />
-              <p class="title"></p>
-              <p class="price"></p>
-              <button>Add to cart</button>
-            </a>
-          </template>
-        </section>
-        <p>Explore the rest of the collection <a href="#">here</a></p>
-        <section class="sust">
-          <img src="img/logo-black.png" alt="" />
-          <div>
-            <h2>Sustainable fashion</h2>
-            <p>
-              “At SILFEN, we want to make a difference. We offer gorgeous bags
-              made from recycled materials, which helps both you and us be
-              better, while not comprising. We think that’s pretty cool”
-            </p>
-            <p>Read more about sustainibility <a href="#">here</a></p>
-          </div>
-        </section>
-        <section class="some">
-          <h2>Social Media</h2>
-          <div>
-            <img src="img/silfen_ig_post1.PNG" alt="silfen sustainable bag" />
-            <img src="img/silfen_ig_post2.PNG" alt="silfen sustainable bag" />
-            <img src="img/silfen_ig_post3.PNG" alt="silfen sustainable bag" />
-            <img src="img/silfen_ig_post4.PNG" alt="silfen sustainable bag" />
-          </div>
-          <a
-            class="ig"
-            href="https://www.instagram.com/silfenstudio/"
-            target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            class="fb"
-            href="https://www.facebook.com/Silfenstudio/"
-            target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-        </section>
+    <main class="product_page">
+      <article class="products">
+        <template>
+          <img src="" alt="" />
+          <!-- <div>
+            <h1 class="nameBag"></h1>
+            <p class="price"></p>
+            <p class="description"></p>
+            <p class="material"></p>
+            <p class="dimensions"></p>
+            <button>Add to bag</button>
+          </div> -->
+        </template>
       </article>
+      <h2>People who bought this item also bought</h2>
+      <aside class="products">
+        <a href="product.html">
+          <img src="" alt="" />
+          <p class="title"></p>
+          <p class="price"></p>
+          <button>Add to cart</button>
+        </a>
+      </aside>
+      <section>
+        <h3>Transparency</h3>
+        <p>
+          At Silfen, we want to be transparent with our products, so you know
+          what you buy as a customer.
+        </p>
+        <img src="img/transparency.PNG" alt="Silfen's transparency" />
+        <p>Read more about transparency <a href="#">here</a></p>
+      </section>
     </main>
     <footer>
       <div>
@@ -148,23 +125,7 @@
         <h3>Sign up for newsletter</h3>
         <input type="email" name="email" placeholder="Email address" />
       </div>
-
-      <!-- <aside>
-        <h3>Connect with us</h3>
-        <a
-          class="ig"
-          href="https://www.instagram.com/silfenstudio/"
-          target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          class="fb"
-          href="https://www.facebook.com/Silfenstudio/"
-          target="_blank"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-      </aside> -->
     </footer>
-    <script src="script.js"></script>
+    <script src="script_product.js"></script>
   </body>
 </html>
