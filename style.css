@@ -217,10 +217,24 @@ section img {
 }
 
 /* product page */
-/* .product_page article {
+
+.product_page article {
   display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
   grid-template-columns: 2fr 1fr;
-} */
+  gap: 1rem;
+  place-items: center;
+}
+
+.product_page img {
+  width: 400px;
+  height: fit-content;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+}
 
 .product_page section {
   text-align: center;
