@@ -34,6 +34,7 @@ function showOneItem(item) {
     const myTemplate = document.querySelector(".imageTemplate").content;
     const myClone = myTemplate.cloneNode(true);
     myClone.querySelector("img").src = imageData.source_url;
+    // myClone.querySelector("img").classList.add("hidden");
 
     document.querySelector(".product_page article").appendChild(myClone);
   }
