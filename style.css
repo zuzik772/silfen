@@ -131,23 +131,25 @@ section img {
   border: none;
 }
 
-.products div + p {
+.products + p {
   text-align: right;
   margin: 1rem 2rem 2rem 0;
   grid-column: 1/-1;
   place-self: end;
 }
 
-.products p a,
+.products + p a,
 .sust p a {
   font-weight: 800;
 }
 
 .products aside {
+  margin-top: 2rem;
   grid-column: 1/-1;
-  background-color: var(--secondaryColor);
-  color: white;
+  color: var(--primaryColor);
+  /* color: white; */
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .products aside p {
@@ -187,12 +189,17 @@ section img {
   background-color: #d3eada;
 }
 
+#videoBG {
+  object-fit: cover;
+  object-position: center;
+  width: 80%;
+  height: fit-content;
+  margin: 0 auto;
+}
+
 .shop_intro {
-  background: url(img/intro_bag.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 300px;
   display: grid;
+  background-color: var(--secondaryColor);
 }
 
 .shop_intro div {
@@ -227,10 +234,9 @@ footer input {
   background-color: #d8edf0;
 }
 
-footer aside {
+/* footer aside {
   grid-column: 3/4;
-  margin-top: -5rem;
-}
+} */
 
 i {
   background-color: #d8edf0;
@@ -262,10 +268,10 @@ i:hover {
   footer {
     grid-template-columns: 1fr 1fr;
   }
-  footer aside {
+  /* footer aside {
     grid-column: 2/3;
     margin-top: 0;
-  }
+  } */
 }
 
 @media screen and (max-width: 500px) {
@@ -274,19 +280,10 @@ i:hover {
     justify-items: left;
     padding-left: 2rem;
   }
-  footer aside {
+  /* footer aside {
     grid-column: 1/2;
-  }
+  } */
 }
-
-/* video */
-/* 
-video {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-} */
 
 /* to make bg video */
 
