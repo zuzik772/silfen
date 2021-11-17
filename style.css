@@ -278,6 +278,10 @@ article {
   max-width: 100px;
   /* height: fit-content; */
   opacity: 40%;
+}
+
+.product_page .left img,
+section img {
   transition: 1s;
 }
 
@@ -305,7 +309,8 @@ article {
   grid-row: 4/5;
 }
 
-.product_page img:hover {
+.product_page .left img:hover,
+section img:hover {
   opacity: 100%;
   max-width: 300px;
   z-index: 100;
@@ -415,6 +420,52 @@ i:hover {
   color: white;
   font-size: 50px;
   margin-top: -10px;
+}
+
+.similarBags {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  place-items: center;
+  justify-content: space-around;
+}
+
+.similarBags img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.similarBags img:hover {
+  opacity: 100%;
+}
+.similarBags a {
+  margin: 2rem;
+  display: grid;
+  max-width: 250px;
+}
+.similarBags button {
+  background-color: var(--primaryColor);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+}
+
+.similarBags + p {
+  text-align: right;
+  margin: 1rem 2rem 2rem 0;
+  grid-column: 1/-1;
+  place-self: end;
+}
+
+.similarBags + p a {
+  font-weight: 800;
+}
+
+#similarBagsTitle {
+  text-align: center;
 }
 
 @media screen and (max-width: 700px) {
