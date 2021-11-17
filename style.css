@@ -285,7 +285,7 @@ article {
 }
 
 .product_page .left img,
-section img {
+.product_page section img {
   transition: 1s;
 }
 
@@ -314,7 +314,7 @@ section img {
 }
 
 .product_page .left img:hover,
-section img:hover {
+.product_page section img:hover {
   opacity: 100%;
   max-width: 300px;
   z-index: 100;
