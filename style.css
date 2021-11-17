@@ -436,6 +436,7 @@ i:hover {
 @media screen and (max-width: 600px) {
   header div ul {
     top: 1rem;
+    right: 0;
   }
   header div ul li {
     top: 0rem;
