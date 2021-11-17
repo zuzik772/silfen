@@ -457,10 +457,12 @@ i:hover {
     padding: 2rem;
   }
 
+  .sust video {
+    width: 100%;
+  }
+
   #videoBG {
     width: 100%;
-    height: fit-content;
-    margin: 0 auto;
   }
 
   .products div {
