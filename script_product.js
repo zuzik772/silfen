@@ -28,6 +28,9 @@ function findPresentedBag(allBags) {
 }
 
 function showOneItem(item) {
+  // item that is given to the function is an array containing one object, that's why
+  // below I'm reffering to the frist object of array 'item'
+  item = item[0];
   console.log(item);
   console.log("it works");
 
@@ -61,3 +64,5 @@ function showOneItem(item) {
   clone.querySelector(".dimensions").textContent = item.dimensions;
   document.querySelector(".right").appendChild(clone);
 }
+
+function displaySimilarBags(allBags) {}
