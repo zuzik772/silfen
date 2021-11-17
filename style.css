@@ -134,6 +134,7 @@ section img {
   color: white;
   text-transform: uppercase;
   border: none;
+  font-weight: bold;
 }
 
 .products + p {
@@ -308,6 +309,7 @@ section img {
   text-transform: uppercase;
   border: none;
   padding: 0.5rem 2rem;
+  font-weight: bold;
 }
 .product_page article + p {
   font-size: 1.2rem;
