@@ -34,10 +34,10 @@ function showOneItem(item) {
     const myTemplate = document.querySelector(".imageTemplate").content;
     const myClone = myTemplate.cloneNode(true);
     myClone.querySelector("img").src = imageData.source_url;
-    // myClone.querySelector("img").classList.add("hidden");
 
-    document.querySelector(".product_page article").appendChild(myClone);
+    document.querySelector(".left").appendChild(myClone);
   }
+
 
   const template = document.querySelector(".productInfoTemplate").content;
   const clone = template.cloneNode(true);
@@ -47,8 +47,8 @@ function showOneItem(item) {
   clone.querySelector(".description").textContent = item.description;
   clone.querySelector(".material").textContent = item.material;
   clone.querySelector(".dimensions").textContent = item.dimensions;
-
-  document.querySelector(".product_page article").appendChild(clone);
+ 
+  document.querySelector(".right").appendChild(clone);
 }
 // showDetails();
 // function showDetails() {

@@ -66,22 +66,28 @@
       </nav>
     </header>
     <main class="product_page">
-      <article>
-        <template class="imageTemplate hidden">
-          <img src="" alt="" />
-        </template>
 
-        <template class="productInfoTemplate">
-          <div class="productInfo">
-            <h1 class="nameBag"></h1>
-            <p class="price"></p>
-            <p class="description"></p>
-            <p class="material"></p>
-            <p class="dimensions"></p>
-            <button>Add to bag</button>
-          </div>
-        </template>
+      <article>
+        <div class="left">
+          <template class="imageTemplate">
+            <img src="" alt="" />
+          </template>
+        </div>
+
+        <div class="right">
+          <template class="productInfoTemplate">
+            <div class="productInfo">
+              <h1 class="nameBag"></h1>
+              <p class="price"></p>
+              <p class="description"></p>
+              <p class="material"></p>
+              <p class="dimensions"></p>
+              <button>Add to bag</button>
+            </div>
+          </template>
+        </div>
       </article>
+
       <p>People who bought this item also bought</p>
       <!-- <aside>
         <a href="product.html">
