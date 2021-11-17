@@ -434,6 +434,13 @@ i:hover {
 /* media queries */
 
 @media screen and (max-width: 600px) {
+  header div ul {
+    top: 1rem;
+  }
+  header div ul li {
+    top: 0rem;
+    right: 0.5rem;
+  }
   nav ul li:nth-child(3),
   nav ul li:nth-child(5) {
     display: none;
@@ -463,6 +470,7 @@ i:hover {
 
   #videoBG {
     width: 100%;
+    object-fit: contain;
   }
 
   .products div {
