@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-const url = "https://zuzanacreates.com/wp21d/wp-json/wp/v2/bag";
+const url = "https://zuzanacreates.com/wp21d/wp-json/wp/v2/bag?_embed";
 
 let allData = [];
 fetch(url)
@@ -11,6 +11,7 @@ fetch(url)
   .then((data) => {
     allData = data;
     findPresentedBag(allData);
+    displaySimilarBags(allData);
   });
 // .then(showOneItem);
 
@@ -65,4 +66,22 @@ function showOneItem(item) {
   document.querySelector(".right").appendChild(clone);
 }
 
-function displaySimilarBags(allBags) {}
+function displaySimilarBags(allBags) {
+  const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let item;
+  for (let i = 0; i < 3; i++) {
+    const mathInt = array.length;
+    const randomNr = Math.floor(Math.random() * mathInt);
+    const pos = array[randomNr];
+    array.splice(randomNr, 1);
+    item = allBags[pos];
+    const myTemplate = document.querySelector(".similarBagsTemplate").content;
+    const myClone = myTemplate.cloneNode(true);
+    myClone.querySelector(".title").textContent = item.bag_name;
+    myClone.querySelector(".price").textContent = `${item.price} DKK`;
+    myClone.querySelector("a").setAttribute("href", "product.html?id=" + item.id);
+    myClone.querySelector("img").src =
+      item._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+    document.querySelector("aside").appendChild(myClone);
+  }
+}
