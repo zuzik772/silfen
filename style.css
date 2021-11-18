@@ -96,6 +96,18 @@ article {
   margin: 0;
 }
 
+.intro img {
+  max-width: 800px;
+}
+
+@media screen and (min-width: 1400px) {
+  .intro img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .some img {
   max-width: 200px;
 }
@@ -107,11 +119,6 @@ article {
 
 .intro {
   background-color: var(--secondaryColor);
-}
-
-.intro img {
-  width: 700px;
-  max-width: 100%;
 }
 
 .products {
@@ -452,61 +459,16 @@ i:hover {
 
 /* media queries */
 
-@media screen and (max-width: 600px) {
-  header div ul {
-    top: 1rem;
-    right: 0;
-  }
-  header div ul li {
-    top: 0rem;
-    right: 0.5rem;
-  }
-  nav ul li:nth-child(3),
-  nav ul li:nth-child(5) {
-    display: none;
-  }
-  .intro {
-    display: block;
-  }
-  .intro div {
-    margin: 1.5rem;
-  }
-  .intro h1 {
-    font-size: 2rem;
-  }
-  .products {
-    width: 100%;
-    margin: 0;
-  }
-
-  .sust {
-    display: block;
-    padding: 2rem;
-  }
-
-  .sust video {
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 56.25vw !important;
-  }
-
-  #videoBG {
-    width: 100%;
-    object-fit: contain;
-    max-width: 100%;
-  }
-
-  .products div {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    width: 90%;
-  }
-}
-
 @media screen and (min-width: 1000px) {
   .productInfo {
     width: 75%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .intro img {
+    max-width: 600px;
   }
 }
 
@@ -515,6 +477,14 @@ i:hover {
     grid-template-columns: 3fr 2fr;
     margin: 3rem auto;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .intro img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -559,5 +529,57 @@ i:hover {
   }
   .product_page section img {
     max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header div ul {
+    top: 1rem;
+    right: 0;
+  }
+  header div ul li {
+    top: 0rem;
+    right: 0.5rem;
+  }
+  nav ul li:nth-child(3),
+  nav ul li:nth-child(5) {
+    display: none;
+  }
+  .intro {
+    display: block;
+  }
+  .intro div {
+    margin: 1.5rem;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .products {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sust {
+    display: block;
+    padding: 2.5%;
+  }
+
+  .sust video {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 56.25vw !important;
+  }
+
+  #videoBG {
+    width: 100%;
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .products div {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: 90%;
   }
 }
