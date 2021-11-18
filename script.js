@@ -1,3 +1,15 @@
+window.addEventListener("DOMContentLoaded", delay);
+
+function delay() {
+  // alert("hello");
+  setTimeout(startVideo, 1000);
+}
+
+function startVideo() {
+  const videoEl = document.querySelector("video");
+  videoEl.play();
+}
+
 const url = "https://zuzanacreates.com/wp21d/wp-json/wp/v2/bag?_embed";
 
 fetch(url)
