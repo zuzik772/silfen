@@ -200,11 +200,13 @@ article {
 
 /* shop page */
 #videoBG {
-  object-fit: cover;
-  object-position: center;
-  width: 80%;
-  height: fit-content;
+  /* object-fit: cover;
+object-position: center;
+width: 80%;
+height: fit-content; */
   margin: 0 auto;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 .shop_intro {
@@ -233,9 +235,6 @@ article {
   width: 80%;
   height: fit-content;
   margin: 0 auto;
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 56.25vw !important;
 }
 
 /* product page */
@@ -532,6 +531,7 @@ i:hover {
   #videoBG {
     width: 100%;
     object-fit: contain;
+    max-width: 100%;
   }
 
   .products div {
